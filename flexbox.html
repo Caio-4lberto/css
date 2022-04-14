@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            height: 100%;
+            display: flex;     /* Por padrão o flex forçar a ficar tudo na mesma linha , então é preciso usar flex-wrap para respeitar o tamanho e se preciso quebrar linha*/
+            flex-direction: row;  /*column vai para baixo como o padrão, row é ao lado*/
+            /* flex-wrap: wrap; */
+            /* justify-content: center; */
+            justify-content: flex-end;
+            /* align-items: center; */
+            align-items: flex-end;  /* Verificar pq esta dando erro*/
+            
+        }
+
+        .child{
+            width: 20%;
+            height: 200px;
+            background-color: red;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" >
+<!--    <div style="order:3;" class="child"></div>        O order serve para alterar a ordem das div que estão sob efeito do display: flex -->
+        <div class="child"></div>    
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child">Conteúdo</div>
+    </div>
+</body>
+</html>
